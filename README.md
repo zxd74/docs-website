@@ -1,6 +1,10 @@
 # docs-website
 Provide some local static resource builds for official document websites
 
+# 技术参考
+* Docker容器化管理
+* 文档构建工具：Hugo，Docusaurus
+
 # 个人说明和建议
 * 本项目为个人学习实践项目，仅用于学习交流
 * 本项目中对于所有涉及的网络问题，请自行解决(如Github/Docker等)
