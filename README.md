@@ -6,7 +6,7 @@ Provide some local static resource builds for official document websites
 * 文档构建工具：Hugo，Docusaurus
 
 # 个人说明和建议
-* 本项目为个人学习实践项目，仅用于学习交流
+* 本项目为个人学习实践项目，仅用于学习交流,部分内容来源[dongle-cdoe](https://github.com/zxd74/dongle-code/tree/main/direction/develop)
 * 本项目中所有官网文档均有官网开源项目提供(如Github等)
 * 本项目中对于所有涉及的网络问题，请自行解决(如Github/Docker/NPM/YARN等)
 * **若学习时间充足，不提倡直接参考**本项目中的文档，建议根据官方文档手动实践下
