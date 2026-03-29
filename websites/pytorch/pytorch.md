@@ -15,17 +15,18 @@
     ```
 4. 编译PyTorch（核心）`python setup.py develop`(或`build`)
     ```bash
-    #export USE_CUDA=0
-    #export USE_CUDNN=0
-    #export USE_ROCM=0
-    #export USE_HPU=0          # 关键：关闭 HPU（Habana）
-    #export USE_NPU=0
-    #export USE_XPU=0
-    #export USE_MPS=0
-    #export USE_IPEX=0
-    #export BUILD_TEST=0
-    #export USE_FBGEMM=0
-    #export USE_MKLDNN=0
+    # 根据系统环境做调整
+    export USE_CUDA=0
+    export USE_CUDNN=0
+    export USE_ROCM=0
+    export USE_HPU=0
+    export USE_NPU=0
+    export USE_XPU=0
+    export USE_MPS=0
+    export USE_IPEX=0
+    export BUILD_TEST=0
+    export USE_FBGEMM=0
+    export USE_MKLDNN=0
     cd pytorch # pytorch根目录
     python setup.py develop
     ```
