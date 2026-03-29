@@ -7,14 +7,19 @@
     (base) ~ conda list
     ```
    - `编译环境`:`yum install -y gcc-c++ git`
-   - `torch`：`pip install torch` (保持torch版本与文档对应版本一致)
-2. 克隆源码 `git clone --depth 1 git@github.com:pytorch/pytorch.git` (推荐稳定版stable)
+2. 克隆源码
+    ```bash
+    # 推荐稳定版stable
+    # git clone --depth 1 https://github.com/xxx/xxx.git -b 你的commitid
+    git clone --depth 1 git@github.com:pytorch/pytorch.git -b 449b176 # 449b1768410104d3ed79d3bcfe4ba1d65c7f22c0 (v2.10.0)
+    ```
 3. 安装依赖
     ```bash
     # pip install -r docs/requirements.txt # 转向 pytorch/.ci/docker/requirements-docs.txt
     pip install ../.ci/docker/requirements-docs.txt
+    pip install torch # 保持与源码版本一致
     ```
-4. 编译PyTorch（核心）`python setup.py develop`(或`build`)
+<!-- 4. 编译PyTorch（核心）`python setup.py develop`(或`build`)
     ```bash
     # 根据系统环境做调整
     export USE_CUDA=0
@@ -30,8 +35,8 @@
     export USE_MKLDNN=0
     cd pytorch # pytorch根目录
     python setup.py develop
-    ```
-5. 构建文档html `sphinx-build -M html source build`
+    ``` -->
+1. 构建文档html
     ```bash
     cd docs
     make html # sphinx-build -M html source build
