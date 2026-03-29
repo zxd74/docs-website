@@ -7,7 +7,8 @@
     (base) ~ conda list
     ```
    - `编译环境`:`yum install -y gcc-c++ git`
-2. 克隆源码 `git clone --depth 1 git@github.com:pytorch/pytorch.git`
+   - `torch`：`pip install torch` (保持torch版本与文档对应版本一致)
+2. 克隆源码 `git clone --depth 1 git@github.com:pytorch/pytorch.git` (推荐稳定版stable)
 3. 安装依赖
     ```bash
     # pip install -r docs/requirements.txt # 转向 pytorch/.ci/docker/requirements-docs.txt
