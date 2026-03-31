@@ -47,7 +47,7 @@
 ## tutorials
 tutorials文档和pytorch官方文档源不一致，需要额外构架按
 
-1. 环境要求：推荐python 2.10
+1. 环境要求：推荐python 2.10(部分依赖包限定)
     ```bash
     conda install python=2.10
     ```
