@@ -1,3 +1,4 @@
+# 官方文档
 1. 环境准备
    - `conda`:考虑miniconda
     ```bash
@@ -9,9 +10,10 @@
    - `编译环境`:`yum install -y gcc-c++ git`
 2. 克隆源码
     ```bash
-    # 推荐稳定版stable
-    # git clone --depth 1 https://github.com/xxx/xxx.git -b 你的commitid
-    git clone --depth 1 git@github.com:pytorch/pytorch.git -b 449b176 # 449b1768410104d3ed79d3bcfe4ba1d65c7f22c0 (v2.10.0)
+    # 推荐稳定版stable 449b1768410104d3ed79d3bcfe4ba1d65c7f22c0 (v2.10.0)
+    git clone --depth 1 https://github.com/xxx/xxx.git
+    git fetch origin 449b1768410104d3ed79d3bcfe4ba1d65c7f22c0
+    git checkout 449b1768410104d3ed79d3bcfe4ba1d65c7f22c0 (v2.10.0)
     ```
 3. 安装依赖
     ```bash
@@ -41,3 +43,28 @@
     cd docs
     make html # sphinx-build -M html source build
     ```
+
+## tutorials
+tutorials文档和pytorch官方文档源不一致，需要额外构架按
+
+1. 环境要求：python<2.13(推荐python 2.12)
+```bash
+conda install python==2.12 
+```
+2. 克隆tutorials源码
+```bash
+git clone --depth 1 git@github.com:pytorch/tutorials.git
+```
+3. 安装依赖
+```py
+cd tutorials
+pip install -r requirements.txt
+```
+4. 构建文档
+   1. 提前下载必需数据`Makefile:download`，其中有些数据集需要科学上网，自行搜索
+      1. 数据集 `./.jenkins/download_data.py`
+      2. 脚本：`Makefile:download-last-reviewed-json`
+   2. 执行构建
+   ```bash
+   make docs
+   ```
