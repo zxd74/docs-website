@@ -75,5 +75,6 @@ tutorials文档和pytorch官方文档源不一致，需要额外构架按
       2. 脚本：`Makefile:download-last-reviewed-json`
    2. 执行构建
    ```bash
-   make docs
+   make docs # 会执行模型训练
+   make html-noplot # 不执行模型训练,直接生成 _build/html
    ```
