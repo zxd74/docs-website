@@ -47,19 +47,28 @@
 ## tutorials
 tutorials文档和pytorch官方文档源不一致，需要额外构架按
 
-1. 环境要求：python<2.13(推荐python 2.12)
-```bash
-conda install python==2.12 
-```
+1. 环境要求：推荐python 2.10
+    ```bash
+    conda install python=2.10
+    ```
 2. 克隆tutorials源码
-```bash
-git clone --depth 1 git@github.com:pytorch/tutorials.git
-```
+    ```bash
+    git clone --depth 1 git@github.com:pytorch/tutorials.git
+    ```
 3. 安装依赖
-```py
-cd tutorials
-pip install -r requirements.txt
-```
+    ```py
+    # 提前安装部分依赖包：部分需要下载并编译，避免网络等环境问题# mosaic
+    git clone --depth 1 git@github.com:facebookresearch/mosaic.git@8f1444f
+    cd mosaic
+    pip install -r requirements.txt
+    pip install .
+
+    # scipy 直接下载编译后的包
+    pip install scipy==1.11.1 --only-binary=scipy --no-build-isolation
+    
+    cd tutorials
+    pip install -r requirements.txt
+    ```
 4. 构建文档
    1. 提前下载必需数据`Makefile:download`，其中有些数据集需要科学上网，自行搜索
       1. 数据集 `./.jenkins/download_data.py`
